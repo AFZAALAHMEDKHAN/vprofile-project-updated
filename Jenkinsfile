@@ -62,6 +62,14 @@ pipeline {
                 }
             }
         }
+
+        stage('Quality Gate') {
+            steps {
+                timeout(time: 1, unit: 'HOURS') {
+                    waitForQualityGate abortPipeline: true               
+                }
+            }
+        } //this stage is designed to wait for the results of a quality check, ensuring that the pipeline is aborted if the code does not meet the necessary quality criteria within an hour.
     }
 }
 
