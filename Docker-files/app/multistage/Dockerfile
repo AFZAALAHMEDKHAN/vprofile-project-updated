@@ -1,9 +1,9 @@
-FROM openjdk:11 AS BUILD_IMAGE
+FROM openjdk:8 AS BUILD_IMAGE
 RUN apt update && apt install maven -y
 RUN git clone -b vp-docker https://github.com/imranvisualpath/vprofile-repo.git
 RUN cd vprofile-repo && mvn install
 
-FROM tomcat:9-jre11
+FROM tomcat:8-jre11
 
 RUN rm -rf /usr/local/tomcat/webapps/*
 
