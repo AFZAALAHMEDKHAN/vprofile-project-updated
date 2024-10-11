@@ -14,11 +14,13 @@ services:
 
   vpromemcached:
     image: memcached
+    container_name: vpromemcached
     ports:
       - "11211:11211"
   
   vprorabbitmq:
     image: rabbitmq
+    container_name: vprorabbitmq
     ports:
       - "15672:15672"
     environment:
