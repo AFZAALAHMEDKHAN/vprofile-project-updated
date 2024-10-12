@@ -1,4 +1,4 @@
-FROM mysql:8.0.39
+FROM mysql:8.0.33
 LABEL "AUTHOR"="AFZAAL"
 
 ENV MYSQL_ROOT_PASSWORD="vprodbpass"
