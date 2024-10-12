@@ -9,9 +9,6 @@ services:
       - "3306:3306"
     volumes:
       - vprodbdata:/var/lib/mysql
-    environment:
-      - MYSQL_ROOT_PASSWORD=vprodbpass
-      - MYSQL_DATABASE=accounts
 
   vpromemcached:
     image: memcached
