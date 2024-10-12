@@ -1,6 +1,6 @@
 FROM openjdk:11 AS BUILD_IMAGE
 RUN apt update && apt install maven -y
-RUN git clone --branch containers https://github.com/AFZAALAHMEDKHAN/vprofile-project-updated.git
+RUN git clone --branch docker https://github.com/AFZAALAHMEDKHAN/vprofile-project-updated.git
 RUN cd vprofile-project-updated && mvn install
 
 
